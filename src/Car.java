@@ -15,6 +15,30 @@ public class Car {
         this.id = id;
     }
 
+    public String getMake(){
+        return this.make;
+    }
+    public String getBrand(){
+        return this.brand;
+    }
+    public Integer getYear(){
+        return this.year;
+    }
+    public Integer getPrice(){
+        return this.price;
+    }
+    public Integer getId(){
+        return getId();
+    }
 
-
+    @Override
+    public String toString() {
+        return "Car{" +
+                "make='" + make + '\'' +
+                ", brand='" + brand + '\'' +
+                ", year=" + year +
+                ", price=" + price +
+                ", id=" + id +
+                '}';
+    }
 }
