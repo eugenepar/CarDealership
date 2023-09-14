@@ -4,7 +4,7 @@ import java.util.List;
 public class Customer {
     private String name;
     private String phoneNumber;
-    private ArrayList<Car> listOfBoughtCars;
+    private ArrayList<Car> listOfBoughtCars = new ArrayList<>();
 
     Customer(String name,String phoneNumber){
         this.name = name;
