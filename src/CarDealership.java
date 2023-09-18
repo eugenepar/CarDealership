@@ -7,13 +7,18 @@ public class CarDealership {
         carsForSale.add(car);
     }
 
+    private Boolean canGetCarByAge(Customer customer) {
+        return 18 <= (2023 - customer.getBirthYear());
+    }
+
     public Boolean sellCar(Car car, Customer customer) {
-        if (carsForSale.remove(car)) {
+        if (canGetCarByAge(customer) && (carsForSale.remove(car))) {
             customer.buyCar(car);
             return true;
         }
         return false;
     }
+
 
     public ArrayList<Car> getCarsForSale() {
         return this.carsForSale;
@@ -26,7 +31,10 @@ public class CarDealership {
         }
         return false;
     }
+
 }
+
+
 
 
 
